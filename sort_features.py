@@ -15,7 +15,8 @@ import osr
 import gdal
 
 def sortlayer(l, fd):
-	"""Sorts feature stack order in a shapefile.
+	"""Sorts feature stack order in a shapefile. Sorts in ascending order so that greatest values are at
+	the bottom of the attribute list and therefore at the top of the stack order.
 
 	Args:
 		l: Shapefile to read attributes.
@@ -49,3 +50,7 @@ def sortlayer(l, fd):
 			fiddst = fidsrc
 		ftmp.SetFID(fiddst)
 		inlayer.SetFeature(ftmp)
+
+l = "input_file.shp" #change "input_file.shp" to the name of your shapefile
+fd = "acq_date" #field to filter by
+sortlayer(l, fd)
