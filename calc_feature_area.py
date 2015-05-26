@@ -14,6 +14,12 @@ import ogr
 import osr
 import gdal
 
+_CYLINDRICAL_EQUAL_AREA_PROJ4_DEF = (
+    '+proj=cea +lon_0=0 +lat_ts=0 +x_0=0 +y_0=0 +datum='
+    'WGS84 +units=m +no_defs')
+
+_SRS_EPSG = 4326  # Lat Lon WGS84.
+
 def CalculateArea(geom):
 	"""Calculate are in Sqkm for given input geom.
 
