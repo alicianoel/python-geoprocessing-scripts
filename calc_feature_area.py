@@ -70,5 +70,5 @@ def AddArea(input_shp):
 		area_field = ogr.FieldDefn('area_sqkm', ogr.OFTReal)
 		layer.CreateField(area_field)
 		
-input_shp = "input_file.shp" #change "input_file.shp" to your file name.
+input_shp = "input_file.shp" #change "input_file.shp" to your file name. input proj should be WGS84.
 AddArea(input_shp)
