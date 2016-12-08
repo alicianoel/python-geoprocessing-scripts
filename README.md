@@ -11,3 +11,6 @@
 
 - spatial_filter.py<br>
   selects features from 'input_shp' that intersect 'aoi', and places them in 'output_shp'.
+
+- point_in_polygons_sum.py<br>
+  replicates the 'Join Attributes by Location' tool in QGIS to sum a specific value in a point layer based on a polygon layer.
